@@ -19,7 +19,8 @@ public class RecursiveInsertLast implements InsertLastStrategy {
             head.next = new ListNode(value);
             return head; // placeholder
         }
-        return  insertLast(head.next, value);
+        head.next = insertLast(head.next, value);
+        return  head;
     }
 
     // Simple memory helpers for the demo
