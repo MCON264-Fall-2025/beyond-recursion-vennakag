@@ -5,6 +5,19 @@ public class IterativeFibonacci implements FibonacciStrategy {
     @Override
     public long compute(int n) {
         //TODO implement using iterative approach
+        long num = 0;
+        long result = 1;
+        int i = n;
+        while(i>1){
+            long temp = result;
+            result = result + num;
+            num = temp;
+            i--;
+        }
+        if(n==0){
+            return 0;
+        }
+        return result;
     }
 
 
